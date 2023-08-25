@@ -27,12 +27,20 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/weather-underground-icons/dist/icons/black/png/32x32",
+                "output": "./assets/weather-icons"
+              }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/particles.js/particles.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d1d1051c-af81-4653-b302-3b3e87c4c80c"
   }
 }
